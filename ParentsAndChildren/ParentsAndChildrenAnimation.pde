@@ -1,4 +1,8 @@
 // Declare and contruct two objects (h1, h2) from the class HLine
+
+String[] sentence1 = {"i", "am", "tall"};
+String[] sentence2 = {"i", "am", "nice"};
+
 int numRiffs = 5;
 Riff[] riffs  = new Riff[numRiffs];
 int sz = 1000;
@@ -16,7 +20,13 @@ void setup()
 }
 
 void draw() {
+
  background(0);
+ 
+  textSize(100);
+  stroke(120,120,120);
+  text(sentence1, height/2, width/2, 0);
+ 
  camera(3000*(cos(mouseX*2*PI/width)), 0,
 3000*(sin(mouseX*2*PI/width)), 0, 0, 0,
       0.0, 1.0, 0.0);
