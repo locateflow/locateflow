@@ -1,7 +1,12 @@
 // Declare and contruct two objects (h1, h2) from the class HLine
 
+ArrayList sent;
+
 String[] sentence1 = {"i", "am", "tall"};
 String[] sentence2 = {"i", "am", "nice"};
+  
+
+
 
 int numRiffs = 5;
 Riff[] riffs  = new Riff[numRiffs];
@@ -11,6 +16,8 @@ float drag = .94;
 
 void setup()
 {
+ 
+
  size(1000, 600, P3D);
  frameRate(30);
  for (int i = 0; i < numRiffs; i++) {
@@ -25,7 +32,10 @@ void draw() {
  
   textSize(100);
   stroke(120,120,120);
-  text(sentence1, height/2, width/2, 0);
+  for(int i = 0; i < sentence1.length; i++){
+  text(sentence1[i], random(height/2), random(width/2), 0);
+  }
+  
  
  camera(3000*(cos(mouseX*2*PI/width)), 0,
 3000*(sin(mouseX*2*PI/width)), 0, 0, 0,
